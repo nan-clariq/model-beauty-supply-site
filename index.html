@@ -131,15 +131,14 @@
   <div class="wrap">
     <span class="kicker">Hours</span>
     <h2>Open 9 AM, six days a week</h2>
-    <!-- Opening times confirmed by the owner 2026-08-16: 9 AM Mon-Sat, 10 AM Sun.
-         Closing times are not confirmed yet, so this deliberately states opening
-         only rather than printing a guess. When they are known, add them here and
-         in the JSON-LD below, copied off the Google listing so the two agree. -->
+    <!-- Full week confirmed 2026-08-16 off the store's own Google listing.
+         If the listing hours ever change, change them here in the same sitting
+         so the two can never disagree. -->
     <table class="hours">
-      <tr><td>Monday to Saturday</td><td>Open from 9:00 AM</td></tr>
-      <tr><td>Sunday</td><td>Open from 10:00 AM</td></tr>
+      <tr><td>Monday to Thursday</td><td>9:00 AM to 8:00 PM</td></tr>
+      <tr><td>Friday and Saturday</td><td>9:00 AM to 8:30 PM</td></tr>
+      <tr><td>Sunday</td><td>10:00 AM to 7:00 PM</td></tr>
     </table>
-    <p>Closing time varies. Give us a call and we will tell you what is open today.</p>
     <p><strong>Getting here:</strong> a short walk from the 168th Street bus terminal, and from Jamaica Center on the E, J and Z. The F at 169th Street is close too.</p>
   </div>
 </section>
@@ -201,8 +200,9 @@
     "addressCountry":"US"
   },
   "openingHoursSpecification":[
-    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"09:00"},
-    {"@type":"OpeningHoursSpecification","dayOfWeek":"Sunday","opens":"10:00"}
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday"],"opens":"09:00","closes":"20:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Friday","Saturday"],"opens":"09:00","closes":"20:30"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":"Sunday","opens":"10:00","closes":"19:00"}
   ],
   "paymentAccepted":"Cash",
   "knowsLanguage":["en","bn"]
